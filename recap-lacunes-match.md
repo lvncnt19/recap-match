@@ -10,20 +10,11 @@
 - Bord de ruck délaissé
 - 6 déf pour 2 attaquants petit côté → essai en 3 passes de l'autre côté
 
-### Trop d’erreurs individuelles
+## Trop d’erreurs individuelles
 
 - 2 pénalités retournées pour gestes de nervosité
 - Placage haut, placage à l’épaule, en-avant volontaire
 - 2 pénalités sur 2 gros temps forts car on tombe trop vite au sol (dont 1 sur SMP ce qui est interdit)
-
-### Regards fixés sur les rucks
-
-- Analyser ce qui se passe en face
-
-### Placement au retour
-
-- Pourquoi pas si on joue à la main.
-- Même si le ballon ne sort pas, qu’est-ce qu’on attend pour se placer ?
 
 ## Attaque
 
@@ -43,6 +34,15 @@ On peut retenir le jeu dans l’axe : grâce au jeu à 1 passe, aux chapelles, o
 ### On ne joue pas assez dans le sens
 
 - 5 temps de jeu pour 4 passes.
+
+### Regards fixés sur les rucks
+
+- Analyser ce qui se passe en face
+
+### Placement au retour
+
+- Pourquoi pas si on joue à la main.
+- Même si le ballon ne sort pas, qu’est-ce qu’on attend pour se placer ?
 
 ## Conclusion
 
