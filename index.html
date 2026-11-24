@@ -77,33 +77,34 @@
       font-weight: 700;
     }
     section {
-      margin-bottom: 40px;
+      margin-bottom: 48px;
       scroll-margin-top: 16px;
     }
     section > h2 {
-      font-size: clamp(1.15rem, 3.2vw, 1.35rem);
-      margin: 0 0 14px;
+      font-size: clamp(1.35rem, 3.5vw, 1.6rem);
+      margin: 0 0 20px;
+      font-weight: 700;
+    }
+    .block {
+      margin-bottom: 28px;
+    }
+    .block > h3 {
+      font-size: clamp(1.05rem, 2.8vw, 1.2rem);
+      margin: 0 0 12px;
       font-weight: 650;
+      color: var(--text);
     }
     .item {
       padding: 16px 0;
       border-top: 1px solid var(--border);
     }
     .item:first-of-type { border-top: none; padding-top: 0; }
-    .item .label {
-      display: inline-block;
-      font-size: 11px;
-      font-weight: 700;
-      letter-spacing: 0.04em;
-      text-transform: uppercase;
-      color: var(--accent);
-      margin-bottom: 6px;
-    }
     .item p {
       margin: 0 0 12px;
       max-width: 68ch;
       font-size: 15px;
     }
+    .item p:last-child { margin-bottom: 0; }
     .item ul {
       margin: 0;
       padding-left: 18px;
@@ -112,6 +113,7 @@
       margin-bottom: 8px;
       font-size: 15px;
     }
+    .item li:last-child { margin-bottom: 0; }
     video {
       display: block;
       width: 100%;
@@ -156,13 +158,7 @@
       <div class="brand">Coaching</div>
       <h1>Récap match</h1>
       <a href="#defense">Défense</a>
-      <a href="#erreurs">Erreurs</a>
-      <a href="#temps-forts">Temps forts</a>
-      <a href="#profondeur">Profondeur</a>
-      <a href="#regards">Rucks</a>
-      <a href="#plan">Plan</a>
-      <a href="#sens">Sens</a>
-      <a href="#retour">Retour</a>
+      <a href="#attaque">Attaque</a>
       <a href="#conclusion">Conclusion</a>
     </nav>
 
@@ -172,105 +168,98 @@
       </header>
 
       <section id="defense">
-        <h2>Défense : manque de lucidité, on est en réaction</h2>
+        <h2>Défense</h2>
 
-        <div class="item">
-          <div class="label">passivite2</div>
-          <p>Situation lourde : 6 gars dans le petit côté qui marchent → essai en 3 passes.</p>
-          <video src="media/passivite2.mp4" controls preload="metadata" playsinline></video>
+        <div class="block">
+          <h3>Manque de lucidité, on est en réaction</h3>
+          <div class="item">
+            <p>Situation lourde : 6 gars dans le petit côté qui marchent → essai en 3 passes.</p>
+            <video src="media/passivite2.mp4" controls preload="metadata" playsinline></video>
+          </div>
+          <div class="item">
+            <p>Bord de ruck délaissé</p>
+            <video src="media/passivite.mp4" controls preload="metadata" playsinline></video>
+          </div>
+          <div class="item">
+            <p>6 déf pour 2 attaquants petit côté → essai en 3 passes de l'autre côté</p>
+            <video src="media/passivite3.mp4" controls preload="metadata" playsinline></video>
+          </div>
         </div>
 
-        <div class="item">
-          <div class="label">passivite4 · passivite.mp4</div>
-          <p>Personne dans le petit.</p>
-          <video src="media/passivite.mp4" controls preload="metadata" playsinline></video>
+        <div class="block">
+          <h3>Trop d’erreurs individuelles</h3>
+          <div class="item">
+            <ul>
+              <li>2 pénalités retournées pour gestes de nervosité</li>
+              <li>Placage haut, placage à l’épaule, en-avant volontaire</li>
+              <li>2 pénalités sur 2 gros temps forts car on tombe trop vite au sol (dont 1 sur SMP ce qui est interdit)</li>
+            </ul>
+          </div>
         </div>
 
-        <div class="item">
-          <div class="label">passivite3</div>
-          <p>6 déf pour 2 attaquants petit côté→ essai en 3 passes de l'autre côté</p>
-          <video src="media/passivite3.mp4" controls preload="metadata" playsinline></video>
+        <div class="block">
+          <h3>Regards fixés sur les rucks</h3>
+          <div class="item">
+            <p>Analyser ce qui se passe en face</p>
+            <video src="media/temps_fort_gache.mp4" controls preload="metadata" playsinline></video>
+          </div>
+        </div>
+
+        <div class="block">
+          <h3>Placement au retour</h3>
+          <div class="item">
+            <p>Pourquoi pas si on joue à la main.</p>
+            <video src="media/placement_retour1.mp4" controls preload="metadata" playsinline></video>
+          </div>
+          <div class="item">
+            <p>Même si le ballon ne sort pas, qu’est-ce qu’on attend pour se placer ?</p>
+            <video src="media/placement_retour2.mp4" controls preload="metadata" playsinline></video>
+          </div>
         </div>
       </section>
 
-      <section id="erreurs">
-        <h2>Trop d’erreurs individuelles</h2>
-        <div class="item">
-          <ul>
-            <li>2 pénalités retournées contre To pour gestes de nervosité</li>
-            <li>Placage haut, placage à l’épaule, en-avant volontaire</li>
-            <li>2 pénalités sur 2 gros temps forts car on tombe trop vite au sol (dont 1 sur SMP ce qui est interdit)</li>
-          </ul>
-        </div>
-      </section>
+      <section id="attaque">
+        <h2>Attaque</h2>
 
-      <section id="temps-forts">
-        <h2>Temps forts / avancés dans l’axe</h2>
-        <div class="item">
-          <p>On peut retenir le jeu dans l’axe : grâce au jeu à 1 passe, aux chapelles, on se met bien dans l'avancé et on cencentre les défenseurs mais si on veut marquer des essaies, il faut sortir des ballons.</p>
+        <div class="block">
+          <h3>Temps forts / avancés dans l’axe</h3>
+          <div class="item">
+            <p>On peut retenir le jeu dans l’axe : grâce au jeu à 1 passe, aux chapelles, on se met bien dans l'avancé et on concentre les défenseurs mais si on veut marquer des essais, il faut sortir des ballons.</p>
+          </div>
+          <div class="item">
+            <video src="media/temps_fort.mp4" controls preload="metadata" playsinline></video>
+          </div>
+          <div class="item">
+            <video src="media/temps_fort2.mp4" controls preload="metadata" playsinline></video>
+          </div>
         </div>
-        <div class="item">
-          <div class="label">temps_fort</div>
-          <video src="media/temps_fort.mp4" controls preload="metadata" playsinline></video>
-        </div>
-        <div class="item">
-          <div class="label">temps_fort2</div>
-          <video src="media/temps_fort2.mp4" controls preload="metadata" playsinline></video>
-        </div>
-      </section>
 
-      <section id="profondeur">
-        <h2>Manque de profondeur dans le jeu</h2>
-        <div class="item">
-          <div class="label">exter_introuvable</div>
-          <p>Placement pourtant bon, léger manque de prof au début pour se laisser le temps.</p>
-          <video src="media/exter_introuvable.mp4" controls preload="metadata" playsinline></video>
+        <div class="block">
+          <h3>Manque de profondeur dans le jeu</h3>
+          <div class="item">
+            <p>Placement pourtant bon, léger manque de prof au début pour se laisser le temps.</p>
+            <video src="media/exter_introuvable.mp4" controls preload="metadata" playsinline></video>
+          </div>
+          <div class="item">
+            <p>À plat.</p>
+            <video src="media/placement_sens.mp4" controls preload="metadata" playsinline></video>
+          </div>
         </div>
-        <div class="item">
-          <div class="label">placement_sens</div>
-          <p>À plat.</p>
-          <video src="media/placement_sens.mp4" controls preload="metadata" playsinline></video>
-        </div>
-      </section>
 
-      <section id="regards">
-        <h2>Regards fixés sur les rucks</h2>
-        <div class="item">
-          <div class="label">temps_fort_gache</div>
-          <p>Analyser ce qui se passe en face</p>
-          <video src="media/temps_fort_gache.mp4" controls preload="metadata" playsinline></video>
+        <div class="block">
+          <h3>Plan de jeu pas assez respecté</h3>
+          <div class="item">
+            <p>Que font 2 coupes entre 9 et 10 pour au final jouer large ? On a un plan de jeu simple qu'il faudrait davantage respecter</p>
+            <video src="media/temps_fort3.mp4" controls preload="metadata" playsinline></video>
+          </div>
         </div>
-      </section>
 
-      <section id="plan">
-        <h2>Plan de jeu pas assez respecté</h2>
-        <div class="item">
-          <div class="label">temps_fort3</div>
-          <p>Que font 2 coupes entre 9 et 10 pour au final jouer large ? On a un plan de jeu simple qu'il faudrait d'avantage respecter</p>
-          <video src="media/temps_fort3.mp4" controls preload="metadata" playsinline></video>
-        </div>
-      </section>
-
-      <section id="sens">
-        <h2>On ne joue pas assez dans le sens</h2>
-        <div class="item">
-          <div class="label">temps_fort_gache2</div>
-          <p>5 temps de jeu pour 4 passes.</p>
-          <video src="media/temps_fort_gache2.mp4" controls preload="metadata" playsinline></video>
-        </div>
-      </section>
-
-      <section id="retour">
-        <h2>Placement au retour</h2>
-        <div class="item">
-          <div class="label">placement_retour1</div>
-          <p>Pourquoi pas si on joue à la main.</p>
-          <video src="media/placement_retour1.mp4" controls preload="metadata" playsinline></video>
-        </div>
-        <div class="item">
-          <div class="label">placement_retour2</div>
-          <p>Même si le ballon ne sort pas, qu’est-ce qu’on attend pour se placer ?</p>
-          <video src="media/placement_retour2.mp4" controls preload="metadata" playsinline></video>
+        <div class="block">
+          <h3>On ne joue pas assez dans le sens</h3>
+          <div class="item">
+            <p>5 temps de jeu pour 4 passes.</p>
+            <video src="media/temps_fort_gache2.mp4" controls preload="metadata" playsinline></video>
+          </div>
         </div>
       </section>
 
