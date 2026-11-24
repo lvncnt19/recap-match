@@ -134,10 +134,11 @@
       width: 100%;
       max-width: 720px;
       height: auto;
-      background: #000;
+      background: #11151c;
       border: 1px solid var(--border);
       border-radius: 8px;
-      aspect-ratio: 16 / 9;
+      aspect-ratio: 960 / 446;
+      object-fit: cover;
     }
     @media (max-width: 840px) {
       .layout { grid-template-columns: 1fr; }
@@ -192,15 +193,15 @@
           <h3>Manque de lucidité, on est en réaction</h3>
           <div class="item">
             <p>Situation lourde : 6 gars dans le petit côté qui marchent → essai en 3 passes.</p>
-            <video src="media/passivite2.mp4" controls preload="metadata" playsinline></video>
+            <video src="media/passivite2.mp4" poster="media/passivite2.jpg" controls preload="none" playsinline></video>
           </div>
           <div class="item">
             <p>Bord de ruck délaissé</p>
-            <video src="media/passivite.mp4" controls preload="metadata" playsinline></video>
+            <video src="media/passivite.mp4" poster="media/passivite.jpg" controls preload="none" playsinline></video>
           </div>
           <div class="item">
             <p>6 déf pour 2 attaquants petit côté → essai en 3 passes de l'autre côté</p>
-            <video src="media/passivite3.mp4" controls preload="metadata" playsinline></video>
+            <video src="media/passivite3.mp4" poster="media/passivite3.jpg" controls preload="none" playsinline></video>
           </div>
         </div>
       </section>
@@ -227,10 +228,10 @@
             <p>On peut retenir le jeu dans l’axe : grâce au jeu à 1 passe, aux chapelles, on se met bien dans l'avancé et on concentre les défenseurs mais si on veut marquer des essais, il faut sortir des ballons.</p>
           </div>
           <div class="item">
-            <video src="media/temps_fort.mp4" controls preload="metadata" playsinline></video>
+            <video src="media/temps_fort.mp4" poster="media/temps_fort.jpg" controls preload="none" playsinline></video>
           </div>
           <div class="item">
-            <video src="media/temps_fort2.mp4" controls preload="metadata" playsinline></video>
+            <video src="media/temps_fort2.mp4" poster="media/temps_fort2.jpg" controls preload="none" playsinline></video>
           </div>
         </div>
 
@@ -238,11 +239,11 @@
           <h3>Manque de profondeur dans le jeu</h3>
           <div class="item">
             <p>Placement pourtant bon, léger manque de prof au début pour se laisser le temps.</p>
-            <video src="media/exter_introuvable.mp4" controls preload="metadata" playsinline></video>
+            <video src="media/exter_introuvable.mp4" poster="media/exter_introuvable.jpg" controls preload="none" playsinline></video>
           </div>
           <div class="item">
             <p>À plat.</p>
-            <video src="media/placement_sens.mp4" controls preload="metadata" playsinline></video>
+            <video src="media/placement_sens.mp4" poster="media/placement_sens.jpg" controls preload="none" playsinline></video>
           </div>
         </div>
 
@@ -250,7 +251,7 @@
           <h3>Plan de jeu pas assez respecté</h3>
           <div class="item">
             <p>Que font 2 coupes entre 9 et 10 pour au final jouer large ? On a un plan de jeu simple qu'il faudrait davantage respecter</p>
-            <video src="media/temps_fort3.mp4" controls preload="metadata" playsinline></video>
+            <video src="media/temps_fort3.mp4" poster="media/temps_fort3.jpg" controls preload="none" playsinline></video>
           </div>
         </div>
 
@@ -258,7 +259,7 @@
           <h3>On ne joue pas assez dans le sens</h3>
           <div class="item">
             <p>5 temps de jeu pour 4 passes.</p>
-            <video src="media/temps_fort_gache2.mp4" controls preload="metadata" playsinline></video>
+            <video src="media/temps_fort_gache2.mp4" poster="media/temps_fort_gache2.jpg" controls preload="none" playsinline></video>
           </div>
         </div>
 
@@ -266,7 +267,7 @@
           <h3>Regards fixés sur les rucks</h3>
           <div class="item">
             <p>Analyser ce qui se passe en face</p>
-            <video src="media/temps_fort_gache.mp4" controls preload="metadata" playsinline></video>
+            <video src="media/temps_fort_gache.mp4" poster="media/temps_fort_gache.jpg" controls preload="none" playsinline></video>
           </div>
         </div>
 
@@ -274,11 +275,11 @@
           <h3>Placement au retour</h3>
           <div class="item">
             <p>Pourquoi pas si on joue à la main.</p>
-            <video src="media/placement_retour1.mp4" controls preload="metadata" playsinline></video>
+            <video src="media/placement_retour1.mp4" poster="media/placement_retour1.jpg" controls preload="none" playsinline></video>
           </div>
           <div class="item">
             <p>Même si le ballon ne sort pas, qu’est-ce qu’on attend pour se placer ?</p>
-            <video src="media/placement_retour2.mp4" controls preload="metadata" playsinline></video>
+            <video src="media/placement_retour2.mp4" poster="media/placement_retour2.jpg" controls preload="none" playsinline></video>
           </div>
         </div>
       </section>
@@ -307,6 +308,18 @@
       );
     }, { rootMargin: "-20% 0px -60% 0px", threshold: [0, 0.2, 0.5] });
     sections.forEach((s) => io.observe(s));
+
+    // Preload nearby clips so play starts faster; posters already show instantly.
+    const videos = [...document.querySelectorAll("video")];
+    const preloadIo = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (!entry.isIntersecting) return;
+        const video = entry.target;
+        if (video.preload !== "auto") video.preload = "auto";
+        preloadIo.unobserve(video);
+      });
+    }, { rootMargin: "400px 0px" });
+    videos.forEach((v) => preloadIo.observe(v));
   </script>
 </body>
 </html>
