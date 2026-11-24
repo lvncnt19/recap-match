@@ -8,6 +8,7 @@
     :root {
       --bg: #0f1115;
       --surface: #171a21;
+      --surface-2: #1c212b;
       --border: #2a2f3a;
       --text: #e8eaed;
       --muted: #9aa3b2;
@@ -67,38 +68,52 @@
     }
     main {
       padding: 28px 28px 72px;
-      max-width: 880px;
+      max-width: 920px;
       min-width: 0;
     }
-    .intro { margin-bottom: 28px; }
+    .intro { margin-bottom: 32px; }
     .intro h1 {
       margin: 0;
       font-size: clamp(1.6rem, 4vw, 2rem);
       font-weight: 700;
     }
-    section {
-      margin-bottom: 48px;
+    section.part {
+      margin-bottom: 40px;
       scroll-margin-top: 16px;
+      padding: 24px 22px 20px;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      border-top: 3px solid var(--accent);
     }
-    section > h2 {
+    section.part > h2 {
       font-size: clamp(1.35rem, 3.5vw, 1.6rem);
-      margin: 0 0 20px;
+      margin: 0 0 22px;
+      padding-bottom: 14px;
+      border-bottom: 1px solid var(--border);
       font-weight: 700;
+      letter-spacing: 0.01em;
     }
     .block {
-      margin-bottom: 28px;
+      margin-bottom: 22px;
+      padding: 16px 16px 14px;
+      background: var(--surface-2);
+      border: 1px solid var(--border);
+      border-radius: 10px;
     }
+    .block:last-child { margin-bottom: 0; }
     .block > h3 {
-      font-size: clamp(1.05rem, 2.8vw, 1.2rem);
+      font-size: clamp(1.02rem, 2.6vw, 1.15rem);
       margin: 0 0 12px;
       font-weight: 650;
       color: var(--text);
     }
     .item {
-      padding: 16px 0;
+      padding: 14px 0;
       border-top: 1px solid var(--border);
     }
     .item:first-of-type { border-top: none; padding-top: 0; }
+    .item:last-child { padding-bottom: 0; }
     .item p {
       margin: 0 0 12px;
       max-width: 68ch;
@@ -148,6 +163,8 @@
         border: 1px solid var(--border);
       }
       main { padding: 20px 14px 56px; }
+      section.part { padding: 18px 14px 14px; border-radius: 10px; }
+      .block { padding: 14px 12px 12px; }
       video { max-width: 100%; border-radius: 6px; }
     }
   </style>
@@ -158,6 +175,7 @@
       <div class="brand">Coaching</div>
       <h1>Récap match Uzerche</h1>
       <a href="#defense">Défense</a>
+      <a href="#erreurs">Erreurs</a>
       <a href="#attaque">Attaque</a>
       <a href="#conclusion">Conclusion</a>
     </nav>
@@ -167,7 +185,7 @@
         <h1>Récap match Uzerche</h1>
       </header>
 
-      <section id="defense">
+      <section class="part" id="defense">
         <h2>Défense</h2>
 
         <div class="block">
@@ -185,9 +203,11 @@
             <video src="media/passivite3.mp4" controls preload="metadata" playsinline></video>
           </div>
         </div>
+      </section>
 
+      <section class="part" id="erreurs">
+        <h2>Trop d’erreurs individuelles</h2>
         <div class="block">
-          <h3>Trop d’erreurs individuelles</h3>
           <div class="item">
             <ul>
               <li>2 pénalités retournées pour gestes de nervosité</li>
@@ -196,29 +216,9 @@
             </ul>
           </div>
         </div>
-
-        <div class="block">
-          <h3>Regards fixés sur les rucks</h3>
-          <div class="item">
-            <p>Analyser ce qui se passe en face</p>
-            <video src="media/temps_fort_gache.mp4" controls preload="metadata" playsinline></video>
-          </div>
-        </div>
-
-        <div class="block">
-          <h3>Placement au retour</h3>
-          <div class="item">
-            <p>Pourquoi pas si on joue à la main.</p>
-            <video src="media/placement_retour1.mp4" controls preload="metadata" playsinline></video>
-          </div>
-          <div class="item">
-            <p>Même si le ballon ne sort pas, qu’est-ce qu’on attend pour se placer ?</p>
-            <video src="media/placement_retour2.mp4" controls preload="metadata" playsinline></video>
-          </div>
-        </div>
       </section>
 
-      <section id="attaque">
+      <section class="part" id="attaque">
         <h2>Attaque</h2>
 
         <div class="block">
@@ -261,13 +261,35 @@
             <video src="media/temps_fort_gache2.mp4" controls preload="metadata" playsinline></video>
           </div>
         </div>
+
+        <div class="block">
+          <h3>Regards fixés sur les rucks</h3>
+          <div class="item">
+            <p>Analyser ce qui se passe en face</p>
+            <video src="media/temps_fort_gache.mp4" controls preload="metadata" playsinline></video>
+          </div>
+        </div>
+
+        <div class="block">
+          <h3>Placement au retour</h3>
+          <div class="item">
+            <p>Pourquoi pas si on joue à la main.</p>
+            <video src="media/placement_retour1.mp4" controls preload="metadata" playsinline></video>
+          </div>
+          <div class="item">
+            <p>Même si le ballon ne sort pas, qu’est-ce qu’on attend pour se placer ?</p>
+            <video src="media/placement_retour2.mp4" controls preload="metadata" playsinline></video>
+          </div>
+        </div>
       </section>
 
-      <section id="conclusion">
+      <section class="part" id="conclusion">
         <h2>Conclusion</h2>
-        <div class="item">
-          <p><strong>1ère mi-temps</strong> — Trop passifs défensivement ; essais adverses en 2/3 passes trop faciles. La frustration a coûté cher en pénalités.</p>
-          <p><strong>2ème mi-temps</strong> — On a trouvé de l’avancé via le jeu dans l’axe. Il reste à mieux respecter le plan pour aller chercher les extérieurs et finir les actions.</p>
+        <div class="block">
+          <div class="item">
+            <p><strong>1ère mi-temps</strong> — Trop passifs défensivement ; essais adverses en 2/3 passes trop faciles. La frustration a coûté cher en pénalités.</p>
+            <p><strong>2ème mi-temps</strong> — On a trouvé de l’avancé via le jeu dans l’axe. Il reste à mieux respecter le plan pour aller chercher les extérieurs et finir les actions.</p>
+          </div>
         </div>
       </section>
     </main>
