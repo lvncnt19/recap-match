@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>Récap match</title>
+  <style>
+    :root {
+      --bg: #0f1115;
+      --surface: #171a21;
+      --border: #2a2f3a;
+      --text: #e8eaed;
+      --muted: #9aa3b2;
+      --accent: #c45c26;
+      --accent-soft: rgba(196, 92, 38, 0.14);
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+    body {
+      margin: 0;
+      font-family: "Segoe UI", "Helvetica Neue", Helvetica, Arial, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.5;
+    }
+    .layout {
+      display: grid;
+      grid-template-columns: minmax(0, 220px) minmax(0, 1fr);
+      min-height: 100vh;
+    }
+    nav {
+      position: sticky;
+      top: 0;
+      height: 100vh;
+      overflow: auto;
+      padding: 24px 14px;
+      border-right: 1px solid var(--border);
+      background: var(--surface);
+      -webkit-overflow-scrolling: touch;
+    }
+    nav .brand {
+      font-size: 12px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 6px;
+      font-weight: 700;
+    }
+    nav h1 {
+      font-size: 17px;
+      margin: 0 0 16px;
+      font-weight: 650;
+      line-height: 1.25;
+    }
+    nav a {
+      display: block;
+      color: var(--muted);
+      text-decoration: none;
+      font-size: 13px;
+      padding: 10px 10px;
+      border-radius: 8px;
+      margin-bottom: 2px;
+    }
+    nav a:hover, nav a.active {
+      color: var(--text);
+      background: var(--accent-soft);
+    }
+    main {
+      padding: 28px 28px 72px;
+      max-width: 880px;
+      min-width: 0;
+    }
+    .intro { margin-bottom: 28px; }
+    .intro h1 {
+      margin: 0;
+      font-size: clamp(1.6rem, 4vw, 2rem);
+      font-weight: 700;
+    }
+    section {
+      margin-bottom: 40px;
+      scroll-margin-top: 16px;
+    }
+    section > h2 {
+      font-size: clamp(1.15rem, 3.2vw, 1.35rem);
+      margin: 0 0 14px;
+      font-weight: 650;
+    }
+    .item {
+      padding: 16px 0;
+      border-top: 1px solid var(--border);
+    }
+    .item:first-of-type { border-top: none; padding-top: 0; }
+    .item .label {
+      display: inline-block;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 6px;
+    }
+    .item p {
+      margin: 0 0 12px;
+      max-width: 68ch;
+      font-size: 15px;
+    }
+    .item ul {
+      margin: 0;
+      padding-left: 18px;
+    }
+    .item li {
+      margin-bottom: 8px;
+      font-size: 15px;
+    }
+    video {
+      display: block;
+      width: 100%;
+      max-width: 720px;
+      height: auto;
+      background: #000;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      aspect-ratio: 16 / 9;
+    }
+    @media (max-width: 840px) {
+      .layout { grid-template-columns: 1fr; }
+      nav {
+        position: relative;
+        height: auto;
+        max-height: none;
+        border-right: none;
+        border-bottom: 1px solid var(--border);
+        padding: 16px 12px 12px;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 4px;
+        align-items: center;
+      }
+      nav .brand { width: 100%; margin-bottom: 0; }
+      nav h1 { width: 100%; margin: 0 0 8px; font-size: 16px; }
+      nav a {
+        display: inline-block;
+        padding: 8px 10px;
+        font-size: 12px;
+        background: var(--bg);
+        border: 1px solid var(--border);
+      }
+      main { padding: 20px 14px 56px; }
+      video { max-width: 100%; border-radius: 6px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="layout">
+    <nav>
+      <div class="brand">Coaching</div>
+      <h1>Récap match</h1>
+      <a href="#defense">Défense</a>
+      <a href="#erreurs">Erreurs</a>
+      <a href="#temps-forts">Temps forts</a>
+      <a href="#profondeur">Profondeur</a>
+      <a href="#regards">Rucks</a>
+      <a href="#plan">Plan</a>
+      <a href="#sens">Sens</a>
+      <a href="#retour">Retour</a>
+      <a href="#conclusion">Conclusion</a>
+    </nav>
+
+    <main>
+      <header class="intro">
+        <h1>Récap match</h1>
+      </header>
+
+      <section id="defense">
+        <h2>Défense : manque de lucidité, on est en réaction</h2>
+
+        <div class="item">
+          <div class="label">passivite2</div>
+          <p>Situation lourde : 6 gars dans le petit côté qui marchent → essai en 3 passes.</p>
+          <video src="media/passivite2.mp4" controls preload="metadata" playsinline></video>
+        </div>
+
+        <div class="item">
+          <div class="label">passivite4 · passivite.mp4</div>
+          <p>Personne dans le petit.</p>
+          <video src="media/passivite.mp4" controls preload="metadata" playsinline></video>
+        </div>
+
+        <div class="item">
+          <div class="label">passivite3</div>
+          <p>6 déf pour 2 attaquants petit côté→ essai en 3 passes de l'autre côté</p>
+          <video src="media/passivite3.mp4" controls preload="metadata" playsinline></video>
+        </div>
+      </section>
+
+      <section id="erreurs">
+        <h2>Trop d’erreurs individuelles</h2>
+        <div class="item">
+          <ul>
+            <li>2 pénalités retournées contre To pour gestes de nervosité</li>
+            <li>Placage haut, placage à l’épaule, en-avant volontaire</li>
+            <li>2 pénalités sur 2 gros temps forts car on tombe trop vite au sol (dont 1 sur SMP ce qui est interdit)</li>
+          </ul>
+        </div>
+      </section>
+
+      <section id="temps-forts">
+        <h2>Temps forts / avancés dans l’axe</h2>
+        <div class="item">
+          <p>On peut retenir le jeu dans l’axe : grâce au jeu à 1 passe, aux chapelles, on se met bien dans l'avancé et on cencentre les défenseurs mais si on veut marquer des essaies, il faut sortir des ballons.</p>
+        </div>
+        <div class="item">
+          <div class="label">temps_fort</div>
+          <video src="media/temps_fort.mp4" controls preload="metadata" playsinline></video>
+        </div>
+        <div class="item">
+          <div class="label">temps_fort2</div>
+          <video src="media/temps_fort2.mp4" controls preload="metadata" playsinline></video>
+        </div>
+      </section>
+
+      <section id="profondeur">
+        <h2>Manque de profondeur dans le jeu</h2>
+        <div class="item">
+          <div class="label">exter_introuvable</div>
+          <p>Placement pourtant bon, léger manque de prof au début pour se laisser le temps.</p>
+          <video src="media/exter_introuvable.mp4" controls preload="metadata" playsinline></video>
+        </div>
+        <div class="item">
+          <div class="label">placement_sens</div>
+          <p>À plat.</p>
+          <video src="media/placement_sens.mp4" controls preload="metadata" playsinline></video>
+        </div>
+      </section>
+
+      <section id="regards">
+        <h2>Regards fixés sur les rucks</h2>
+        <div class="item">
+          <div class="label">temps_fort_gache</div>
+          <p>Analyser ce qui se passe en face</p>
+          <video src="media/temps_fort_gache.mp4" controls preload="metadata" playsinline></video>
+        </div>
+      </section>
+
+      <section id="plan">
+        <h2>Plan de jeu pas assez respecté</h2>
+        <div class="item">
+          <div class="label">temps_fort3</div>
+          <p>Que font 2 coupes entre 9 et 10 pour au final jouer large ? On a un plan de jeu simple qu'il faudrait d'avantage respecter</p>
+          <video src="media/temps_fort3.mp4" controls preload="metadata" playsinline></video>
+        </div>
+      </section>
+
+      <section id="sens">
+        <h2>On ne joue pas assez dans le sens</h2>
+        <div class="item">
+          <div class="label">temps_fort_gache2</div>
+          <p>5 temps de jeu pour 4 passes.</p>
+          <video src="media/temps_fort_gache2.mp4" controls preload="metadata" playsinline></video>
+        </div>
+      </section>
+
+      <section id="retour">
+        <h2>Placement au retour</h2>
+        <div class="item">
+          <div class="label">placement_retour1</div>
+          <p>Pourquoi pas si on joue à la main.</p>
+          <video src="media/placement_retour1.mp4" controls preload="metadata" playsinline></video>
+        </div>
+        <div class="item">
+          <div class="label">placement_retour2</div>
+          <p>Même si le ballon ne sort pas, qu’est-ce qu’on attend pour se placer ?</p>
+          <video src="media/placement_retour2.mp4" controls preload="metadata" playsinline></video>
+        </div>
+      </section>
+
+      <section id="conclusion">
+        <h2>Conclusion</h2>
+        <div class="item">
+          <p><strong>1ère mi-temps</strong> — Trop passifs défensivement ; essais adverses en 2/3 passes trop faciles. La frustration a coûté cher en pénalités.</p>
+          <p><strong>2ème mi-temps</strong> — On a trouvé de l’avancé via le jeu dans l’axe. Il reste à mieux respecter le plan pour aller chercher les extérieurs et finir les actions.</p>
+        </div>
+      </section>
+    </main>
+  </div>
+  <script>
+    const links = [...document.querySelectorAll("nav a")];
+    const sections = links.map((a) => document.querySelector(a.getAttribute("href"))).filter(Boolean);
+    const io = new IntersectionObserver((entries) => {
+      const visible = entries
+        .filter((e) => e.isIntersecting)
+        .sort((a, b) => b.intersectionRatio - a.intersectionRatio)[0];
+      if (!visible) return;
+      links.forEach((a) =>
+        a.classList.toggle("active", a.getAttribute("href") === "#" + visible.target.id)
+      );
+    }, { rootMargin: "-20% 0px -60% 0px", threshold: [0, 0.2, 0.5] });
+    sections.forEach((s) => io.observe(s));
+  </script>
+</body>
+</html>
