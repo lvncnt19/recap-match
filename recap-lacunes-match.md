@@ -1,46 +1,48 @@
-# Récap match
+# Récap match Uzerche
 
 ---
 
-## Défense : manque de lucidité, on est en réaction
+## Défense
 
-- **passivite2** — Situation lourde : 6 gars dans le petit côté qui marchent → essai en 3 passes.
-- **passivite4** *(fichier* `passivite.mp4`*)* — Personne dans le petit.
-- **passivite3** — 6 déf pour 2 attaquants petit côté→ essai en 3 passes de l'autre côté
+### Manque de lucidité, on est en réaction
 
-## Trop d’erreurs individuelles
+- Situation lourde : 6 gars dans le petit côté qui marchent → essai en 3 passes.
+- Bord de ruck délaissé
+- 6 déf pour 2 attaquants petit côté → essai en 3 passes de l'autre côté
 
-- 2 pénalités retournées contre To pour gestes de nervosité
+### Trop d’erreurs individuelles
+
+- 2 pénalités retournées pour gestes de nervosité
 - Placage haut, placage à l’épaule, en-avant volontaire
 - 2 pénalités sur 2 gros temps forts car on tombe trop vite au sol (dont 1 sur SMP ce qui est interdit)
 
-## Temps forts / avancés dans l’axe
+### Regards fixés sur les rucks
 
-On peut retenir le jeu dans l’axe : grâce au jeu à 1 passe, aux chapelles, on se met bien dans l'avancé et on cencentre les défenseurs mais si on veut marquer des essaies, il faut sortir des ballons.
+- Analyser ce qui se passe en face
 
-- **temps_fort** / **temps_fort2**
+### Placement au retour
 
-## Manque de profondeur dans le jeu
+- Pourquoi pas si on joue à la main.
+- Même si le ballon ne sort pas, qu’est-ce qu’on attend pour se placer ?
 
-- **exter_introuvable** — Placement pourtant bon, léger manque de prof au début pour se laisser le temps.
-- **placement_sens** — À plat.
+## Attaque
 
-## Regards fixés sur les rucks
+### Temps forts / avancés dans l’axe
 
-- **temps_fort_gache** — Analyser ce qui se passe en face
+On peut retenir le jeu dans l’axe : grâce au jeu à 1 passe, aux chapelles, on se met bien dans l'avancé et on concentre les défenseurs mais si on veut marquer des essais, il faut sortir des ballons.
 
-## Plan de jeu pas assez respecté
+### Manque de profondeur dans le jeu
 
-- **temps_fort3** — Que font 2 coupes entre 9 et 10 pour au final jouer large ? On a un plan de jeu simple qu'il faudrait d'avantage respecter
+- Placement pourtant bon, léger manque de prof au début pour se laisser le temps.
+- À plat.
 
-## On ne joue pas assez dans le sens
+### Plan de jeu pas assez respecté
 
-- **temps_fort_gache2** — 5 temps de jeu pour 4 passes.
+- Que font 2 coupes entre 9 et 10 pour au final jouer large ? On a un plan de jeu simple qu'il faudrait davantage respecter
 
-## Placement au retour
+### On ne joue pas assez dans le sens
 
-- **placement_retour1** — Pourquoi pas si on joue à la main.
-- **placement_retour2** — Même si le ballon ne sort pas, qu’est-ce qu’on attend pour se placer ?
+- 5 temps de jeu pour 4 passes.
 
 ## Conclusion
 
